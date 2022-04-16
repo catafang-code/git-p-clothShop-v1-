@@ -237,8 +237,42 @@ span.price{
 
 /* subscription */
 .subscription-container{
-  max-width: 90%;
-  margin-top: 50px;
+   background-image: url("https://assets-lighthouse.alphacamp.co/uploads/image/file/14376/template.png");
+  max-width:90%;
+  height: 150px;
+  background-position: center;
+  background-size: cover;
+  margin:0 auto;
+  text-align: center;
+}
+
+.subscription-text{
+  color:#0E0C40;
+  font-size: 0.8rem;
+  padding-top:1.5rem;
+  
+}
+
+.text-form{
+  margin: 1rem 0;
+}
+
+.text-policy a {
+  color:black;
+  text-decoration:underline ;
+}
+
+.sign-btn{
+  background-color:#A61B4E;
+  color:#fff;
+  font-size: 1rem;
+}
+/* ====footer==== */
+
+footer{
+  margin-top: 1rem;
+  text-align:center;
+  font-size: 0.8rem;
 }
 
 /* media setting */
