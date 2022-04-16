@@ -102,6 +102,7 @@ header{
 
 /* 整體內容空間一致 */
 .main-container{
+  /* background-color: grey; pre-veiw */
   max-width:90%px;
   margin:0 auto;
 }
@@ -120,7 +121,8 @@ header{
   display:flex;
   flex-flow:row wrap;
   justify-content: space-evenly;
-  /* background-color:aqua; */
+  margin-bottom: 2rem;
+  /* background-color: seagreen; */
 }
 
 .category-container select{
@@ -136,6 +138,109 @@ header{
   font-weight: 600;
   letter-spacing: 2px;
 }
+
+.product-container{
+  max-width: 90%;
+  margin-top: 50px;
+  
+}
+.card-wrapper{
+  max-width:90%;
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 1rem;
+  justify-content: space-evenly;
+  align-items:center;
+  text-align: center;
+  margin: 0 auto;
+  background-color: #A61B4E;
+  opacity:0.8;
+  padding:0.5rem 0.2rem;
+}
+.card{
+  /* outline:2px dashed grey; */
+  position: relative;
+  width:100%;
+  height:100%;
+  overflow:hidden;  /*出容器的圖片隱藏   */
+  -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.08);
+  -moz-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.08);
+}
+
+.cover-img, .real-img{
+  width:100%;
+  height:100%;
+  object-fit:cover; /* 讓圖片不變形*/
+  aspect-ratio: 1/1;   /* 維持 1:1 讓圖片維持正方形*/
+  transition: opacity 0.9s ease-out;
+  border-radius: 5%;
+}
+.product-heart {
+  position:absolute;
+  top:1.5rem;
+  right:1.8rem;
+  font-size: 2rem;
+  z-index: 990;
+  color: #F22E52;
+  border-radius: 50%;
+  background-color: white;
+}
+
+/*換圖片效果 */
+.card-img{
+  position: relative;
+}
+.real-img{
+  opacity: 0;
+}
+
+.cover-img{
+  /* background-color: blue; */
+  position: absolute;
+  margin: 0 auto;
+  opacity: 1;
+}
+
+.card:hover .real-img {
+  opacity: 1;
+}
+
+.card:hover .cover-img {
+  opacity: 0;
+}
+
+.card-text{
+  text-align: center;
+  font-size: 1rem;
+}
+span.sold-out {
+  color:#0E0C40;
+  font-weight: bold;
+}
+span.price{
+  
+  text-decoration: line-through;
+  /* text-decoration-color:#0E0C40; */
+  text-decoration-thickness: 3px;
+}
+
+
+
+/* Pagination*/
+.pagination {
+  padding: 2rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #fff;
+}
+
+/* subscription */
+.subscription-container{
+  max-width: 90%;
+  margin-top: 50px;
+}
+
 /* media setting */
 
 @media screen and (min-width:960px){
